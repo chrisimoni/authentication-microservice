@@ -14,5 +14,4 @@ import com.imonichris.authenticationmicroservice.entity.Role;
 public interface UserRepository extends JpaRepository<AppUser, Long> {
 	AppUser findByEmail(String email);
 	AppUser findByUserId(String userId);
-	Role findByName(String name);
 }

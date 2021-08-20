@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
  * @author Chris Imoni (https://github.com/chrisimoni)
  * @version 1.0
  */
-@Entity
+@Entity(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

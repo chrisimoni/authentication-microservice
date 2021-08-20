@@ -95,11 +95,10 @@ public class UserServiceImpl implements UserService {
 		Page<AppUser> usersPage = userRepository.findAll(PageableReuest);
 
 		List<AppUser> users = usersPage.getContent();
-
-		for (AppUser user : users) {
+		users.stream().forEach(user -> {
 			UserDTO userDTo = modelMapper.map(user, UserDTO.class);
 			userDTOs.add(userDTo);
-		}
+		});
 
 		return userDTOs;
 	}
